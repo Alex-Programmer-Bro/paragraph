@@ -10,7 +10,9 @@
   "description": "Paragraph Tool for Editor.js",
   "license": "MIT",
   "repository": "https://github.com/editor-js/paragraph",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/paragraph.umd.js",
   "module": "./dist/paragraph.mjs",
   "exports": {
@@ -20,7 +22,7 @@
     }
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "onchange 'src/*.js' 'src/*.css' -- npm run build",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -29,6 +31,7 @@
     "email": "team@codex.so"
   },
   "devDependencies": {
+    "onchange": "^7.1.0",
     "vite": "^4.4.11",
     "vite-plugin-css-injected-by-js": "^3.3.0"
   },
